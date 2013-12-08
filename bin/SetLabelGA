@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# make sure CWD is correct location
+if [ ! -f $1 ];
+then
+	echo "No \"$1\" found."
+	exit 0
+fi
+
+sed -i -r "s/^([\t ]+RUN_LABEL = \")[^\"]*\"; # Label to associate output files with GA run/\1$2\"; # Label to associate output files with GA run/" $1
+

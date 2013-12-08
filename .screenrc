@@ -1,0 +1,27 @@
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+
+autodetach on
+
+# Each of the following creates a new terminal tab/window in screen
+screen -t bash 0 bash
+screen -t edit 0 bash
+
+# Uncomment as many of the following as you wish
+# You have to chdir before you open a tab/window for it to 
+# open at the desired location
+# chdir "$HOME/svn"
+# screen -t svn  0 bash
+# screen -t root 0 sudo su -
+select 0
+
+startup_message off
+vbell off
+altscreen on
+
+bindkey "^[[1;5D" prev  # change window with ctrl-left
+bindkey "^[[1;5C" next  # change window with ctrl-right
+
+defutf8 on
+defscrollback 50000
+

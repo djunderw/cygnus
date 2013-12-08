@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# make sure CWD is correct location
+if [ ! -f $1 ];
+then
+	echo "No \"$1\" found."
+	exit 0
+fi
+
+sed -i -r "s/^([\t ]+POLICY = \")[^\"]*\";/\1$2\";/" $1
+

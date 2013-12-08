@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# make sure CWD is correct location
+if [ ! -f $1 ];
+then
+	echo "No \"$1\" found."
+	exit 0
+fi
+
+# set all disutil's to unfavorable values
+SetDisutil $1 screening  -
+SetDisutil $1 biopsy  -
+SetDisutil $1 diagnosis  -
+SetDisutil $1 treatment  -
+SetDisutil $1 recovery  -
+SetDisutil $1 palliative  -

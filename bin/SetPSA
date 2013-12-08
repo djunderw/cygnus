@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# make sure CWD is correct location
+if [ ! -f $1 ];
+then
+	echo "No \"$1\" found."
+	exit 0
+fi
+
+if [ "$2" = "mayo" ];
+then
+	sed -i -r 's/^([\t ]+PSA_SAMPLING_METHOD =) [0-9];/\1 0;/' $1
+fi
+
+if [ "$2" = "etzioni" ];
+then
+	sed -i -r 's/^([\t ]+PSA_SAMPLING_METHOD =) [0-9];/\1 1;/' $1
+fi

@@ -1,0 +1,46 @@
+#!/bin/bash
+
+tail -n3 RUNS/whites/output/whites.txt
+tail -n3 RUNS/blacks/output/blacks.txt
+tail -n3 RUNS/fh/output/fh.txt
+tail -n3 RUNS/co1/output/co1.txt
+tail -n3 RUNS/co2/output/co2.txt
+
+#tail -n1000 pc2_30p/output/results.txt|grep Generation|tail -n1
+#tail -n1000 pc2_50p/output/results.txt|grep Generation|tail -n1
+#tail -n1000 pc2_80p/output/results.txt|grep Generation|tail -n1
+
+#tail -n1000 g1co1/output/simplify.txt|grep urning|tail -n1
+#tail -n1000 g1co1/output/simplify.txt|grep urning|tail -n1
+#tail -n1000 g1co2/output/simplify.txt|grep urning|tail -n1
+#tail -n1000 g2co1/output/simplify.txt|grep urning|tail -n1
+
+#tail -n1000 g2co2/output/results.txt|grep Generation|tail -n1
+#tail -n1000 g1co2/output/results.txt|grep Generation|tail -n1
+#tail -n1000 g2co1/output/results.txt|grep Generation|tail -n1
+#tail -n1000 g2co2/output/results.txt|grep Generation|tail -n1
+
+
+#cat SA/pc01/output/simplify01.txt|grep new|tail -n1
+#cat SA/pc02/output/simplify02.txt|grep new|tail -n1
+#cat SA/pc03/output/simplify03.txt|grep new|tail -n1
+#cat SA/pc04/output/simplify04.txt|grep new|tail -n1
+#cat SA/pc05/output/simplify05.txt|grep new|tail -n1
+#cat SA/pc06/output/simplify06.txt|grep new|tail -n1
+#cat SA/pc07/output/simplify07.txt|grep new|tail -n1
+#cat SA/pc08/output/simplify08.txt|grep new|tail -n1
+#cat SA/pc09/output/simplify09.txt|grep new|tail -n1
+#cat SA/pc10/output/simplify10.txt|grep new|tail -n1
+#cat SA/pc11/output/simplify11.txt|grep new|tail -n1
+#cat SA/pc12/output/simplify12.txt|grep new|tail -n1
+#cat SA/pc13/output/simplify13.txt|grep new|tail -n1
+#cat SA/pc14/output/simplify14.txt|grep new|tail -n1
+#cat SA/pc15/output/simplify15.txt|grep new|tail -n1
+#cat SA/pc16/output/simplify16.txt|grep new|tail -n1
+#cat SA/pc17/output/simplify17.txt|grep new|tail -n1
+#cat SA/pc18/output/simplify18.txt|grep new|tail -n1
+
+#tail -n1000 pc_PCS-0.2/output/results-pcs-0.2.txt | grep Generation | tail -n1
+#tail -n1000 pc_PCS-0.5/output/results-pcs-0.5.txt | grep Generation | tail -n1
+#tail -n1000 pc_PCS-0.9/output/results-pcs-0.9.txt | grep Generation | tail -n1
+

@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# make sure CWD is correct location
+if [ ! -f $1 ];
+then
+	echo "No \"$1\" found."
+	exit 0
+fi
+
+# set to Favorable
+if [ "$3" = "+" ];
+then
+	# uncomment Favorable
+	sed -i -r "s/^#([\t]disutil_$2[\ =0-9\.;]+# favorable)/\1/" $1
+
+	# comment Base
+	sed -i -r "s/^([\t]disutil_$2[\ =0-9\.;]+# base)/#\1/" $1
+
+	# comment Unfavorable
+	sed -i -r "s/^([\t]disutil_$2[\ =0-9\.;]+# unfavorable)/#\1/" $1
+fi
+
+# set to Baseline
+if [ "$3" = "0" ];
+then
+	# comment Favorable
+	sed -i -r "s/^([\t]disutil_$2[\ =0-9\.;]+# favorable)/#\1/" $1
+
+	# uncomment Base
+	sed -i -r "s/^#([\t]disutil_$2[\ =0-9\.;]+# base)/\1/" $1
+
+	# comment Unfavorable
+	sed -i -r "s/^([\t]disutil_$2[\ =0-9\.;]+# unfavorable)/#\1/" $1
+fi
+
+# set to Unfavorable
+if [ "$3" = "-" ];
+then
+	# comment Favorable
+	sed -i -r "s/^([\t]disutil_$2[\ =0-9\.;]+# favorable)/#\1/" $1
+
+	# comment Base
+	sed -i -r "s/^([\t]disutil_$2[\ =0-9\.;]+# base)/#\1/" $1
+
+	# uncomment Unfavorable
+	sed -i -r "s/^#([\t]disutil_$2[\ =0-9\.;]+# unfavorable)/\1/" $1
+fi
+

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# make sure CWD is correct location
+if [ ! -f $1 ];
+then
+	echo "No \"$1\" found."
+	exit 0
+fi
+
+# set all disutil's to baseline values
+SetDisutil $1 screening  0
+SetDisutil $1 biopsy  0
+SetDisutil $1 diagnosis  0
+SetDisutil $1 treatment  0
+SetDisutil $1 recovery  0
+SetDisutil $1 palliative  0

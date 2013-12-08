@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# make sure CWD is correct location
+if [ ! -f $1 ];
+then
+	echo "No \"$1\" found."
+	exit 0
+fi
+
+if [ "$2" = "whites" ];
+then
+	sed -i -r 's/^([\t ]+TRANSITIONS_MODE =) [0-9];/\1 0;/' $1
+fi
+
+if [ "$2" = "blacks" ];
+then
+	sed -i -r 's/^([\t ]+TRANSITIONS_MODE =) [0-9];/\1 1;/' $1
+fi
+
+if [ "$2" = "familyhistory" -o "$2" = "fh" ];
+then
+	sed -i -r 's/^([\t ]+TRANSITIONS_MODE =) [0-9];/\1 2;/' $1
+fi
+
+if [ "$2" = "co1" ];
+then
+	sed -i -r 's/^([\t ]+TRANSITIONS_MODE =) [0-9];/\1 7;/' $1
+fi
+
+if [ "$2" = "co2" ];
+then
+	sed -i -r 's/^([\t ]+TRANSITIONS_MODE =) [0-9];/\1 8;/' $1
+fi
+
